@@ -8,7 +8,7 @@ const divCarrito = document.getElementById("carrito");
 const botonAgregar = document.getElementById("agregar");
 const botonVaciar = document.getElementById("vaciar");
 
-// ---------------------- FUNCIONES ----------------------
+// ----- FUNCIONES ---
 
 // Guardar carrito en localStorage
 
@@ -72,4 +72,5 @@ botonVaciar.addEventListener("click", () => {
 
 // ---------INICIALIZAR-------
 mostrarCarrito();
+
 
