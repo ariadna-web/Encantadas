@@ -1,7 +1,14 @@
+/*INDEX*/
+
 *{
     margin: 0;
     padding:0;
     font-family: 'poppins', sans-serif;
+}
+:root{
+    --fondo-color:radial-gradient(circle, rgb(114, 163, 255) 0%, rgb(225, 166, 236) 100%);
+    --box-login-register-color:  #fff;
+    --casillas-name-email-color: #eee;
 }
 
 body {
@@ -17,7 +24,7 @@ background: radial-gradient(circle, rgb(114, 163, 255) 0%, rgb(225, 166, 236) 10
     height: 550px;
     background:#fff;
     border-radius: 30px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 30px rgba(194, 82, 82, 0.2);
     margin: 20px;
     overflow: hidden;
 }
@@ -99,6 +106,17 @@ form{
     font-size: 16px;
     color: #fff;
     font-weight: 600;
+} 
+button{
+    background-color: chocolate;
+    color: aqua;
+
+}
+button.hover{
+    background-color: darkblue;
+}
+button.focus{
+    background-color: violet;
 }
 .container p{
     font-size: 14.5px;
@@ -155,7 +173,7 @@ form{
     transition-delay: 1.2s;
 }
 .container.active .toggle-panel.toggle-left{
-    left: -50%; /*SOSPECHOSOOOOOO*/
+    left: -50%; /*SOSPECHOSO*/
     transition-delay: .6s;
 }
 .toggle-panel.toggle-right{
@@ -231,3 +249,5 @@ form{
         font-size: 30px;
     }
 }
+
+/*PAGINA PRINCIPAL*/
