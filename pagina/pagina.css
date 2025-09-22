@@ -1,15 +1,19 @@
 :root{
-    --verde-claro: rgb(0, 255, 21);
+    --verde-claro: rgb(189, 241, 193);
     --rosita:rgb(248, 211, 243);
-    --azul-viejo: rgb(51, 104, 153);
+    --azul-viejo: rgb(94, 142, 187);
     --marron: #5a574b;
     --blanco: #f8e5e5;
-    --lila: rgb(91, 67, 136);
+    --lila: rgb(184, 162, 221);
     --verde: rgb(4, 94, 4);
-    --gris: rgb(121, 125, 138);
+    --gris: rgb(181, 184, 192);
     --negro: rgb(0, 0, 0); 
     --lila-claro: rgb(203, 193, 216);
-    
+    --degrade:radial-gradient(circle, rgb(114, 163, 255) 0%, C 100%);
+    --lineal: linear-gradient(0deg,rgba(159, 210, 224, 1) 0%, rgb(243, 151, 205) 100%);
+    --azul: rgb(30, 30, 61);
+    --lineal2:linear-gradient(0deg,rgb(243, 151, 205) 0%, #83dffd 100% );
+    --rosa:rgb(231, 152, 198) ; 
 }
 *{
    margin: 0%;
@@ -18,15 +22,19 @@
    text-decoration: none;
    list-style: none;
 }
+body{
+    background-image: var(--lineal2);
+}
 img{
     max-width: 100%;
 }
 .container{
     max-width: 1200px;
     margin: 0 auto;
+    
 }
 .header{
-    background-color:var(--rosita) ;
+    background-image: var(--lineal);
     display: flex;
     align-items: center;
     min-height: 70vh;
@@ -53,9 +61,9 @@ img{
     float: left;
 }
 .menu .navbar ul li a{
-    font-size: 18px;
+    font-size: 20px;
     padding: 20px;
-    color: var(--lila);
+    color: var(--azul);
     display: block;
     font-weight: 600;
 }
@@ -138,9 +146,15 @@ p{
     padding: 7px 25px;
     border-radius: 5px;
     color: var(--blanco);
-    background-color: var(--verde-claro);
+    background-color: var(--verde);
 }
-
+#carrito{
+    background-color: var(--gris);
+    padding: 10px;
+    margin: 20px;
+    width: 80%;
+    border: 1px solid #ccc;
+}
 .header-img{
     flex-basis: 30%;
     text-align: center;
@@ -154,7 +168,7 @@ p{
     box-shadow:  0 0 20px rgba(0,0,0,0.1);
     padding:  25px 75px;
     margin-top: -75px;
-    background-color: var(--blanco);
+    background-color: var(--lila-claro);
 }
 
 .information-content{
@@ -227,6 +241,7 @@ p{
 .products{
     padding:  0 0 100px 0;
     text-align: center;
+ 
 }
 .products h2{
     font-size: 40px;
@@ -239,12 +254,14 @@ p{
     display: grid;
     grid-template-columns:  repeat(4, 1fr);
     gap: 50px;
+    
 }
 
 .product{
     text-align: center;
     box-shadow:  0 0 20px rgba( 0,0,0,0.1);
     padding: 35px;
+    
 }
 .product img{
     width: 150px;
@@ -253,7 +270,7 @@ p{
 }
 
 .product h3{
-    color: var(--verde-claro);
+    color: var(--azul);
 }
 .product p{
     font-size: 15px;
@@ -267,7 +284,7 @@ p{
     padding: 7px 25px;
     border-radius: 5px;
     color: var(--blanco);
-    background-color: var(--verde-claro);
+    background-color: var(--verde);
 }
 
 .service{
@@ -325,7 +342,7 @@ input{
 }
 .footer{
     padding: 50px 0;
-    background-color: var(--verde-claro);
+    background-color: var(--rosa);
 }
 .footer-content{
     display: flex;

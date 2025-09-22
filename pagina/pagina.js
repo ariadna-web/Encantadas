@@ -1,6 +1,6 @@
 // Variables
 
-const carrito = document.querySelector('#carrito tbody');
+const carrito = document.querySelector('#lista-carrito tbody');
 const listaProductos = document.querySelector('#lista-1');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 let articulosCarrito = [];
@@ -91,3 +91,4 @@ function limpiarCarrito() {
     carrito.removeChild(carrito.firstChild);
   }
 }
+ /* agregar un forEach para contar el precio total del carrito*/
