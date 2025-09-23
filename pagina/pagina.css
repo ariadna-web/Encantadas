@@ -23,7 +23,7 @@
    list-style: none;
 }
 body{
-    background-image: var(--lineal2);
+    background-color: var(--gris);
 }
 img{
     max-width: 100%;
@@ -33,13 +33,21 @@ img{
     margin: 0 auto;
     
 }
-.header{
-    background-image: var(--lineal);
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../imagenes/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh; 
+  
+}
+.header {
     display: flex;
     align-items: center;
     min-height: 70vh;
     padding: 100px o;
 }
+
 .menu{
     position: absolute;
     top: 0%;
@@ -50,24 +58,14 @@ img{
     justify-content: space-between;
 }
 .logo{
-    color: var(--verde);
+     background: -webkit-linear-gradient(#9e5603, #e4ad8f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
     font-size: 40px;
     font-weight: 800;
     text-transform: uppercase;
     
 }
-.menu .navbar ul li{
-    position: relative;
-    float: left;
-}
-.menu .navbar ul li a{
-    font-size: 20px;
-    padding: 20px;
-    color: var(--azul);
-    display: block;
-    font-weight: 600;
-}
-
 #menu{
     display: none;
 }
@@ -91,7 +89,7 @@ img{
     backdrop-filter: blur(10px);
     top: 100%;
     z-index: 1;
-    background-color: var(--azul-viejo);
+    background-color: transparent;
     padding: 20px;
     min-width: 400px;
 }
@@ -99,7 +97,10 @@ table{
     width: 100%;
 }
 th, td{
-    color: var(--carrito-data);
+    color: var(--lila-claro);
+}
+.total{
+    color: var(--rosita);
 }
 
 .borrar{
@@ -129,17 +130,38 @@ th, td{
     display: block;
 }
 .header-txt h1{
-    font-size: 55px;
-    line-height: 1;
-    color: var(--negro);
-    margin-bottom: 25px;
+      -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+
+    font-size: 150px;
+  background: -webkit-linear-gradient(#e4cd66, #024902);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2{
+    
+
+    font-size: 30px;
+  background: -webkit-linear-gradient(#0068a5, #979595);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+h5{
+      font-size: 35px;
+      background: -webkit-linear-gradient(#190074, #706f6f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+p{
+    font-size: 20px;
+     color: var(--azul);
+    font-weight: 800;
+    text-transform: uppercase;
+    
+
 }
 
-p{
-    font-size: 16px;
-    color: var(--azul-viejo);
-    margin-bottom: 45px;
-}
 .btn-1{
     display: inline-block;
     margin-top: 15px;
@@ -149,7 +171,7 @@ p{
     background-color: var(--verde);
 }
 #carrito{
-    background-color: var(--gris);
+    background-color: transparent;
     padding: 10px;
     margin: 20px;
     width: 80%;
@@ -168,7 +190,7 @@ p{
     box-shadow:  0 0 20px rgba(0,0,0,0.1);
     padding:  25px 75px;
     margin-top: -75px;
-    background-color: var(--lila-claro);
+    background-color: var(--lila);
 }
 
 .information-content{
@@ -249,7 +271,12 @@ p{
     text-transform: capitalize;
     margin-bottom: 55px;
 }
-
+.products h3{
+    font-size: 30px;
+    color: var(--negro);
+    text-transform: capitalize;
+    margin-bottom: 55px;
+}
 .product-content{
     display: grid;
     grid-template-columns:  repeat(4, 1fr);
@@ -278,13 +305,24 @@ p{
     color: var(--negro);
     font-weight: 600;
 }
-.btn-2{
+
+.btn-2 {
     display: inline-block;
     margin-top: 15px;
     padding: 7px 25px;
     border-radius: 5px;
     color: var(--blanco);
     background-color: var(--verde);
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+
+.btn-2:hover {
+    background-color: #48aa73; 
+}
+.btn-2:active {
+    background-color: #1b73a7; 
 }
 
 .service{
@@ -342,7 +380,7 @@ input{
 }
 .footer{
     padding: 50px 0;
-    background-color: var(--rosa);
+    background-color: var(--verde-claro);
 }
 .footer-content{
     display: flex;
@@ -430,3 +468,4 @@ input{
         text-align: center;
     }
 }
+btn-2

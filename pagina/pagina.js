@@ -92,3 +92,10 @@ function limpiarCarrito() {
   }
 }
  /* agregar un forEach para contar el precio total del carrito*/
+
+
+    const form = document.querySelector('.contact form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('¡Tu opinión ha sido enviada!');
+    });
