@@ -5,10 +5,10 @@
     --marron: #5a574b;
     --blanco: #f8e5e5;
     --lila: rgb(184, 162, 221);
-    --verde: rgb(4, 94, 4);
+    --verde: rgb(146, 146, 228);
     --gris: rgb(181, 184, 192);
     --negro: rgb(0, 0, 0); 
-    --lila-claro: rgb(203, 193, 216);
+    --lila-claro: rgb(183, 183, 248);
     --degrade:radial-gradient(circle, rgb(114, 163, 255) 0%, C 100%);
     --lineal: linear-gradient(0deg,rgba(159, 210, 224, 1) 0%, rgb(243, 151, 205) 100%);
     --azul: rgb(30, 30, 61);
@@ -137,6 +137,14 @@ th, td{
   background: -webkit-linear-gradient(#e4cd66, #024902);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.opciones{
+    background-color: var(--lila-claro);
+    border-color: var(--verde);
+    padding: 10px;
+    margin: 20px;
+    width: 15%;
+    border: 1px solid #ccc;
 }
 h2{
     

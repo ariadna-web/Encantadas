@@ -15,7 +15,7 @@
 
         <div class="from-box login"><!--/.from-box.login <> -->
         
-            <form action ="../pagina/pagina.html"> 
+            <form action ="../pagina/pagina.html" method="post"> 
                 <h1>Login</h1>
                 <div class="input-box login"><!--/.from-input.login -->
                     <input type="text" placeholder="username" required>
@@ -29,9 +29,9 @@
                     <a href="#">forgot password?</a>
                 </div>
                 <button type="submit" class="btn">login</button>
-                <p>or login whit social platforms</p>
+                <a href="/auth/google">or login with social platforms</a>
                 <div class="social-icon">
-                    <a href="#"> <i class="bx bxl-google"></i></a>
+                    <a href="/auth/google"> <i class="bx bxl-google"></i></a>
                 </div>
             </form>
         </div>
@@ -40,7 +40,7 @@
 
         <div class="from-box register">
         
-            <form action =""> 
+            <form action ="register" method="post"> 
                 <h1>Registration</h1>
                 <div class="input-box">
                     <input type="text" placeholder="username" required>
@@ -52,15 +52,15 @@
                     <i class="bi bi-envelope"></i>
                 </div>
 
-                 <div class="input-box register"> <!--EDIT -->
+                 <div class="input-box register"> 
                     <input type="password" placeholder="password" required>
                     <i class="bi bi-file-lock"></i>
                 </div>
                
                 <button type="submit" class="btn">register</button>
-                <p>or register whit social platforms</p>
+                <a href="/auth/google">or login with social platforms</a>
                 <div class="social-icon">
-                    <a href="#"> <i class="bx bxl-google"></i></a>
+                    <a href="/auth/google"> <i class="bx bxl-google"></i></a>
                 </div>
             </form>
         </div>
@@ -78,5 +78,6 @@
         </div>
     </div>
     <script src="script.js"> </script>
+    <script src="/server.js"></script>
 </body>
 </html>
