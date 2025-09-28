@@ -1,0 +1,50 @@
+# footer-con-mapa-redes-sociales-
+<!--footer-->
+<footer class="footer">
+  <div class="footer-content container">
+
+    <!-- Información -->
+    <div class="footer-info">
+      <h3>📍 Nuestra ubicación</h3>
+      <p>Av. Sarmiento 2546, Buenos Aires </p>
+    </div>
+
+    <!-- Mapa -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.0224705117784!2d-58.38159208423886!3d-34.60368446500698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaa1c6a12345%3A0x9b5b3e0f9d95e6c!2sObelisco!5e0!3m2!1ses!2sar!4v1706201600000"
+        allowfullscreen 
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://wa.me/5491112345678" target="_blank"><i class="bi bi-whatsapp"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+// PAGINA pagina.css
+
+/* Redes sociales en el footer *
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-links a {
+  font-size: 28px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffcc00; /* cambia color al pasar el mouse */
+}
