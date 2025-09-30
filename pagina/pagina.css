@@ -34,7 +34,7 @@ img{
     
 }
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../imagenes/fondo.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/f.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,7 +58,7 @@ img{
     justify-content: space-between;
 }
 .logo{
-     background: -webkit-linear-gradient(#9e5603, #e4ad8f);
+     background: -webkit-linear-gradient(#1dffbb, #02490d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
     font-size: 40px;
@@ -134,7 +134,7 @@ th, td{
   -webkit-text-stroke-color: black;
 
     font-size: 150px;
-  background: -webkit-linear-gradient(#e4cd66, #024902);
+  background: -webkit-linear-gradient(#392750, #28829e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -476,4 +476,4 @@ input{
         text-align: center;
     }
 }
-btn-2
+.header-img
