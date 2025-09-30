@@ -6,7 +6,7 @@
     font-family: 'poppins', sans-serif;
 }
 :root{
-    --fondo-color: rgb(181, 184, 192);
+    --fondo-color: rgb(132, 160, 235);
     --box-login-register-color:  #fff;
     --casillas-name-email-color: #eee;
 }
@@ -28,7 +28,7 @@ background: var(--fondo-color);
     margin: 20px;
     overflow: hidden;
 }
-.from-box{
+.form-box{
     position: absolute;
     right: 0;
     width: 50%;
@@ -41,14 +41,14 @@ background: var(--fondo-color);
     z-index: 1;
    transition: .6s ease-in-out 1.2s, visibility 0s 1s;
 }
-.container.active .from-box{
+.container.active .form-box{
     right: 50%;
 
 }
-.from-box.register{
+.form-box.register{
     visibility: hidden;
 }
-.container.active .from-box.register{
+.container.active .form-box.register{
     visibility: visible;
 }
 form{
@@ -86,7 +86,7 @@ form{
     transform: translateY(-50%);
     font-size: 20px;
     color: #888;
-}
+} from
 .forgot-link{
     margin: -15px 0 15px;
 }
@@ -199,14 +199,14 @@ button.focus{
     .container{
         height: calc(100vh -40px);
     }
-    .from{
+    .form{
         background-color: purple;
         bottom: 0;
         width: 100%;
         height: 70%;
 
     }
-    .container.active .from-box {
+    .container.active .form-box {
         right: 0;
         bottom: 30%;
     }
@@ -242,7 +242,7 @@ button.focus{
     }
 }
 @media screen and (max-width:400px){
-    .from-box{
+    .form-box{
         padding: 20px;
     }
     .toggle-panel h1{
