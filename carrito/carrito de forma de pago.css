@@ -1,1 +1,45 @@
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.productos, .carrito {
+  margin-bottom: 30px;
+}
+
+.producto {
+  margin: 10px 0;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0d47a1;
+}
+
+.carrito ul {
+  list-style: none;
+  padding: 0;
+}
+
+.carrito li {
+  margin: 10px 0;
+}
+
+.pagos {
+  margin-top: 20px;
+}
