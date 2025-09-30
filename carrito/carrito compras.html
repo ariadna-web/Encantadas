@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARRITO</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+  
+  <h1>CARRITO DE COMPRAS</h1>
+
+  <!-- Lista de productos disponibles -->
+  <section class="productos">
+    <h2>Productos</h2>
+    <div class="producto">
+      <p>Libro A - $20</p>
+      <button onclick="agregarAlCarrito('Libro A', 20)">Agregar</button>
+    </div>
+    <div class="producto">
+      <p>Libro B - $15</p>
+      <button onclick="agregarAlCarrito('Libro B', 15)">Agregar</button>
+    </div>
+    <div class="producto">
+      <p>Libro C - $30</p>
+      <button onclick="agregarAlCarrito('Libro C', 30)">Agregar</button>
+    </div>
+  </section>
+
+  <!-- Carrito -->
+  <section class="carrito">
+    <h2>Tu Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <h3>Total: $<span id="total">0</span></h3>
+
+    <button onclick="finalizarCompra()">Finalizar compra</button>
+  </section>
+
+  <script src="carrito-pago.js"></script>
+</body>
+</html>
+
