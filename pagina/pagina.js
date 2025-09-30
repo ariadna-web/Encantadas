@@ -1,6 +1,3 @@
-
-    // Variables 
-
 const carritoElemento = document.querySelector('#lista-carrito tbody')
 const listaProductos = document.querySelector('#lista-1')
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito')
@@ -32,7 +29,6 @@ function cargarEventos() {
     })
 };
 
-
 function agregarProducto(e) {
     e.preventDefault();
     if (e.target.classList.contains('agregar-carrito')) {
@@ -50,7 +46,7 @@ function leerDatosProducto(producto) {
         cantidad: 1
     };
 
-    // Revisar si el producto existe
+    // Revisar
     const existe = articulosCarrito.some(prod => prod.id === infoProducto.id)
     if (existe) {
         articulosCarrito = articulosCarrito.map(prod => {
@@ -82,17 +78,56 @@ function eliminarProducto(e) {
 function carritoHTML() {
     limpiarCarrito();
 
-    articulosCarrito.forEach(prod => {
+
+ articulosCarrito.forEach(prod => {
         const row = document.createElement('tr')
         row.innerHTML = `
             <td><img src="${prod.imagen}" width="50"></td>
             <td>${prod.titulo}</td>
             <td>$${prod.precio.toFixed(2)}</td> 
-            <td>${prod.cantidad}</td>
+            <td>
+                <button class="sumar" data-id="${prod.id}">+</button>
+                ${prod.cantidad}
+                <button class="restar" data-id="${prod.id}">-</button>
+            </td>
             <td><a href="#" class="borrar-producto" data-id="${prod.id}">❌</a></td>
         `;
         carritoElemento.appendChild(row)
     })
+
+    // botones
+    document.querySelectorAll('.sumar').forEach(btn => {
+        btn.addEventListener('click', () => {
+            aumentarCantidad(btn.dataset.id);
+        });
+    });
+    document.querySelectorAll('.restar').forEach(btn => {
+        btn.addEventListener('click', () => {
+            disminuirCantidad(btn.dataset.id);
+        });
+    });
+
+    actualizarTotal();
+    sincronizarStorage();
+}
+
+function aumentarCantidad(id) {
+    articulosCarrito = articulosCarrito.map(prod => {
+        if (prod.id === id) prod.cantidad++;
+        return prod;
+    });
+    carritoHTML();
+}
+
+function disminuirCantidad(id) {
+    articulosCarrito = articulosCarrito.map(prod => {
+        if (prod.id === id) {
+            prod.cantidad--;
+        }
+        return prod;
+    }).filter(prod => prod.cantidad > 0);
+    carritoHTML();
+
 };
 
 function limpiarCarrito() {

@@ -1,6 +1,4 @@
-// ----------------------------
-// Animación de cambiar forms
-// ----------------------------
+//bendita animacion 
 const container = document.querySelector('.container');
 const registerBtn = document.querySelector('.register-btn');
 const loginBtn = document.querySelector('.login-btn');
@@ -13,13 +11,6 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove('active');
 });
 
-// ----------------------------
-// Login y Register
-// ----------------------------
-
-// Asegúrate de que los forms tengan estos IDs:
-// <form id="loginForm">...</form>
-// <form id="registerForm">...</form>
 
 // Registro de usuario
 const registerForm = document.getElementById('registerForm');

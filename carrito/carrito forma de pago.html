@@ -5,49 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CARRITO</title>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="carrito.css">
+  <link rel="stylesheet" href="carrito de forma de pago.css">
 </head>
 <body>
   <h1>CARRITO DE COMPRAS</h1>
-  
+<a href="/pagina.html" class="volver" id="seguir-comprando">seguir comprando</a>
+  <table id="lista-carrito">
+    <thead>
+      <tr>
+        <th>Imagen</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+   
+    </tbody>
+  </table>
 
-  <!-- Lista de productos -->
-  
-  <section class="productos">
-    <h2>Productos</h2>
-    <div class="producto">
-      <p>Libro A - $20</p>
-      <button onclick="agregarAlCarrito('Libro A', 20)">Agregar</button>
-    </div>
-    <div class="producto">
-      <p>Libro B - $15</p>
-      <button onclick="agregarAlCarrito('Libro B', 15)">Agregar</button>
-    </div>
-    <div class="producto">
-      <p>Libro C - $30</p>
-      <button onclick="agregarAlCarrito('Libro C', 30)">Agregar</button>
-    </div>
-  </section>
+  <div class="total"> total$ <samp id="total-carrito">0</samp></div>
 
-  <!-- Carrito -->
-  
-  <section class="carrito">
-    <h2>Tu Carrito</h2>
-    <ul id="lista-carrito"></ul>
-    <h3>Total: $<span id="total">0</span></h3>
+  <button onclick="finalizarCompra()">Finalizar compra</button>
 
-    <button onclick="finalizarCompra()">Finalizar compra</button>
+  <div class="pagos">
+    <h3>Elegí tu forma de pago</h3>
+    <button onclick="pagarConMercadoPago()">🛒 Mercado Pago</button>
+    <button onclick="pagarConTarjeta('credito')">💳 Tarjeta de Crédito</button>
+    <button onclick="pagarConTarjeta('debito')">🏧 Tarjeta de Débito</button>
+  </div>
 
-    <!-- Métodos de pago -->
-    
-    <div class="pagos">
-      <h3>Elegí tu forma de pago</h3>
-      <button onclick="pagarConMercadoPago()">🛒 Mercado Pago</button>
-      <button onclick="pagarConTarjeta('credito')">💳 Tarjeta de Crédito</button>
-      <button onclick="pagarConTarjeta('debito')">🏧 Tarjeta de Débito</button>
-    </div>
-  </section>
-
-  <script src="carrito-pago.js"></script>
+  <script src="carrito de forma pago.js"></script>
 </body>
 </html>

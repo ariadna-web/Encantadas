@@ -1,45 +1,350 @@
+h1
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+    font-family: Arial, sans-serif;
+    background-color: rgb(181, 184, 192);
+    color: #333;
 }
 
-h1, h2 {
-  color: #333;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-.productos, .carrito {
-  margin-bottom: 30px;
+i {
+    font-style: normal;
 }
 
-.producto {
-  margin: 10px 0;
+
+.btn-2, .btn-3, .agregar-carrito {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
 }
 
-button {
-  margin: 5px;
-  padding: 8px 12px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: #1976d2;
-  color: white;
-  font-weight: bold;
+.btn-2, .agregar-carrito { 
+    background-color: #5d3fd3; 
+    color: rgb(90, 3, 3);
 }
 
-button:hover {
-  background-color: #0d47a1;
+.btn-2:hover, .agregar-carrito:hover {
+    background-color: #4a32a6;
 }
 
-.carrito ul {
-  list-style: none;
-  padding: 0;
+.btn-3 { /* Botón de submit/enviar (contacto) */
+    background-color: #333;
+    color: white;
 }
 
-.carrito li {
-  margin: 10px 0;
+.btn-3:hover {
+    background-color: #555;
 }
 
-.pagos {
-  margin-top: 20px;
+
+
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo i {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5d3fd3;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Ocultar checkbox de menú (para móvil) */
+#menu {
+    display: none;
+}
+
+/* Icono de menú (hamburguesa) - Visible en móvil */
+.menu label {
+    cursor: pointer;
+    font-size: 28px;
+    display: none; /* Ocultar por defecto, mostrar en media query */
+}
+
+
+/* --- Carrito Desplegable --- */
+.lista-carrito {
+    position: relative;
+    cursor: pointer;
+}
+
+.lista-carrito > i { /* Icono del carrito */
+    font-size: 28px;
+    color: #5d3fd3;
+}
+
+#carrito {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    padding: 15px;
+    min-width: 350px;
+    z-index: 1001;
+    display: none; /* Ocultar por defecto */
+    transform: translateY(10px);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Mostrar carrito al pasar el ratón (o con JS) */
+.lista-carrito:hover #carrito {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#lista-carrito { /* Tabla del carrito */
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+#lista-carrito th, #lista-carrito td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+#lista-carrito th {
+    font-weight: bold;
+    color: #5d3fd3;
+}
+
+.total {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+.volver{
+   display: inline-block;
+    margin-top: 15px;
+    padding: 7px 25px;
+    border-radius: 5px;
+    color: var(--blanco);
+    background-color: rgb(146, 146, 228);
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+h1{
+    background: -webkit-linear-gradient(#1dffbb, #030f05);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.header-content {
+    padding: 50px 0;
+    background-color: #e9e5ff;
+    text-align: center;
+}
+
+.header-txt h1 {
+    font-size: 48px;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+
+
+h2, h5 {
+    text-align: center;
+    padding: 10px 0;
+    color: #5d3fd3;
+}
+
+
+
+/* --- Productos Destacados --- */
+.products {
+    padding: 60px 0;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.product {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.product-txt {
+    padding: 15px;
+}
+
+.product-txt h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.precio {
+    font-size: 20px;
+    color: #cc0000; /* Rojo para el precio */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+/*
+==================================================
+  Sección de Contacto (Opinión)
+==================================================
+*/
+.contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.contact input[type="text"] {
+    flex-grow: 1;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.contact input[type="submit"] {
+    flex-shrink: 0;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/*
+==================================================
+  Footer
+==================================================
+*/
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/*
+==================================================
+  Media Queries (Adaptación a Móviles)
+==================================================
+*/
+
+@media (max-width: 991px) {
+    /* --- Header / Menú --- */
+    .menu label {
+        display: initial; /* Mostrar el ícono de menú */
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        display: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .menu .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    /* Mostrar menú al hacer clic */
+    #menu:checked ~ .navbar {
+        display: block;
+    }
+    
+    .lista-carrito {
+        margin-top: 15px;
+    }
+
+    /* Ocultar el carrito desplegable por defecto en móviles */
+    .lista-carrito:hover #carrito {
+        display: none;
+    }
+    
+    /* --- Secciones --- */
+    .oferts {
+        flex-direction: column;
+    }
+
+    .contact form {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .contact input[type="submit"] {
+        width: 100%;
+    }
 }
