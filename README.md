@@ -8,9 +8,7 @@
 
 ## Tecnologías
 - Node.js, Express, Mongoose (MongoDB Atlas recomendado)
-- bcrypt, jsonwebtoken (JWT)
-- express-validator, express-rate-limit, helmet, cors
-- nodemon (dev)
+
 
 ## Modelos principales
 - **Usuario**: id, name, email, password
