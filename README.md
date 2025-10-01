@@ -15,3 +15,5 @@
 - **Producto**: id, imagen, titulo, description, precio
 - **Carrito**: user, producto, cantidad]
 
+## URL de nuestra API
+https://final-1-csum.onrender.com/
