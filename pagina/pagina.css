@@ -34,7 +34,7 @@ img{
     
 }
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/f.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imagenes/f.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -414,6 +414,10 @@ input{
 @media (max-width:991px){
     .menu{
         padding: 30px;
+    }
+    .header-txt{
+       display: none;
+         
     }
     .menu label{
         display: initial;
